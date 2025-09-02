@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('template spec', () => {
   it('Deve logar com sucesso', () => {
     cy.start()

@@ -34,3 +34,8 @@ Cypress.Commands.add('submitLoginForm', (email, password) => {
     cy.get('#password').type(password)
     cy.contains('button', 'Entrar').click()
 })
+
+Cypress.Commands.add('navigateToConsultancy', (buttonName, pageTitle) => {
+    cy.contains('button', buttonName).should('be.visible').click()
+    cy.contains('h1', pageTitle).should('be.visible')
+})
