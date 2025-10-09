@@ -1,0 +1,30 @@
+{
+  "personal": {
+    "name": "Albert Einstein",
+    "email": "albert@webdojo.com",
+    "phone": "(11) 99999-1000",
+    "consultancyType1": "In Company",
+    "consultancyType2": "Individual",
+    "personType": "Pessoa Física",
+    "cpf": "656.025.300-70",
+    "discoveryChannels": ["Instagram", "LinkedIn", "Udemy", "YouTube", "Indicação de Amigo"],
+    "documentPath": "./cypress/fixtures/document.pdf",
+    "description": "Gostaria de uma consultoria para melhorar meus testes automatizados.",
+    "techs": ["Cypress", "Selenium", "Playwright", "Robot Framework", "TestCafe", "Cucumber"],
+    "terms": true
+  },
+  "company": {
+    "name": "Albert Company",
+    "email": "albert@webdojo.com",
+    "phone": "(11) 99999-1000",
+    "consultancyType1": "Individual",
+    "consultancyType2": "In Company",
+    "personType": "Pessoa Jurídica",
+    "document": "09.429.306/0001-32",
+    "discoveryChannels": ["Instagram", "LinkedIn", "Udemy", "YouTube", "Indicação de Amigo"],
+    "documentPath": "./cypress/fixtures/document.pdf",
+    "description": "Gostaria de uma consultoria para melhorar meus testes automatizados.",
+    "techs": ["Cypress", "Selenium", "Playwright", "Robot Framework", "TestCafe", "Cucumber"],
+    "terms": true
+  }
+}
