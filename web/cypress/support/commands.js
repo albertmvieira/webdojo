@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import './actions/consultancy.actions';
+
 Cypress.Commands.add('start', () => {
     cy.viewport(1440, 900)
     cy.visit('http://localhost:3000/')
@@ -35,13 +37,25 @@ Cypress.Commands.add('submitLoginForm', (email, password) => {
     cy.contains('button', 'Entrar').click()
 })
 
-Cypress.Commands.add('navigateToConsultancy', (buttonName, pageTitle) => {
+Cypress.Commands.add('goTo', (buttonName, pageTitle) => {
     cy.contains('button', buttonName).should('be.visible').click()
     cy.contains('h1', pageTitle).should('be.visible')
 })
 
 // Helper command to perform login
-Cypress.Commands.add('login', () => {
-    cy.start()
-    cy.submitLoginForm('papito@webdojo.com', 'katana123')
+Cypress.Commands.add('login', (ui = false) => {
+    if (ui === true) {
+        cy.start()
+        cy.submitLoginForm('papito@webdojo.com', 'katana123')
+    } else {
+        const token = 'e1033d63a53fe66c0fd3451c7fd8f617'
+        const loginDate = new Date().toLocaleDateString('pt-BR')
+
+        cy.setCookie('login_date', loginDate)
+        cy.visit('http://localhost:3000/dashboard', {
+            onBeforeLoad(win) {
+                win.localStorage.setItem('token', token)
+            }
+        })
+    }
 })

@@ -6,7 +6,7 @@
     "consultancyType1": "In Company",
     "consultancyType2": "Individual",
     "personType": "Pessoa Física",
-    "cpf": "656.025.300-70",
+    "document": "656.025.300-70",
     "discoveryChannels": ["Instagram", "LinkedIn", "Udemy", "YouTube", "Indicação de Amigo"],
     "documentPath": "./cypress/fixtures/document.pdf",
     "description": "Gostaria de uma consultoria para melhorar meus testes automatizados.",
