@@ -15,7 +15,21 @@ package-lock.json
 *.ntvs*
 *.njsproj
 *.sln
+.settings/
+.vscode/*
+settings.json
 
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/reports/
+cypress/results/
+cypress/downloads/
+/runner/results
+
+#allure reports
+allure-results/

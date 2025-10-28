@@ -5,8 +5,11 @@ describe('Iframe', () => {
     it('Deve assistir o vídeo de introdução dentro do Iframe', () => {
         cy.login()
         cy.contains('Video').should('be.visible').click()
-        cy.url().should('include', '/video')
 
+        //thinking time
+        cy.wait(3000)
+
+        cy.url().should('include', '/video')
         cy.get('iframe[title="Video Player"]').should('exist')
         .its('0.contentDocument.body').should('not.be.empty')
         .then(cy.wrap)
